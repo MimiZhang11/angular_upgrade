@@ -3,18 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { StandaloneComponent } from './components/standalone/standalone.component';
+/* import { StandaloneComponent } from './components/standalone/standalone.component'; */
 import { FormsComponent } from './components/forms/forms.component';
 import { InjectComponent } from './components/inject/inject.component';
-import { ChildComponent } from './components/child/child.component';
+/* import { ChildComponent } from './components/child/child.component'; */
 import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    StandaloneComponent,
+    /* StandaloneComponent, */
     FormsComponent,
     InjectComponent,
-    ChildComponent
+    /* ChildComponent */
   ],
   imports: [
     BrowserModule,
