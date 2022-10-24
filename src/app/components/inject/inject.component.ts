@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { UserService } from 'src/app/services/user';
 
 @Component({
   selector: 'app-inject',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inject.component.css']
 })
 export class InjectComponent{
-
-  constructor() { }
+  userServe = inject(UserService);
+  constructor() {
+    console.log(this.userServe.username());
+   }
 
 }

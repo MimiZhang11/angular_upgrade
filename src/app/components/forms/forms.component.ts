@@ -14,6 +14,19 @@ interface userModel {
 
 export class FormsComponent{
   public personalInfo: FormGroup<userModel>; //在14之前这里都不能添加类型
+  
+  //私有变量加typeof
+  private _data = "hello!";
+
+  get data(): typeof this._data {
+      return this._data;
+  }
+
+  set data(value: typeof this._data) {
+      this._data = value;
+  }
+// end
+
   constructor() { 
     // 升级到14之后，FormControl 自动更新为 UntypedFormControl，
     // FormGroup 自动更新为 UntypedFormGroup
